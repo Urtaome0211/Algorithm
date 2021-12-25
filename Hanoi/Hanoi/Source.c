@@ -4,33 +4,33 @@
 void move(char pos1, char pos2)
 {
 	printf(" %c->%c ", pos1, pos2);
-	//move()º¯ÊıÖ»ÊµÏÖÒ»¸ö¹¦ÄÜ£¬´òÓ¡ÒÆ¶¯µÄ
+	//move()å‡½æ•°åªå®ç°ä¸€ä¸ªåŠŸèƒ½ï¼Œæ‰“å°ç§»åŠ¨çš„
 }
 
 void hanoi(int n, char source, char tmp, char des)
 {
-	//n´ú±íÅÌ×Ó¸öÊı
-	//sourceÆğÊ¼Î»ÖÃ
-	//tmpÖĞ×ªÎ»ÖÃ
-	//desÄ¿µÄÎ»ÖÃ
+	//nä»£è¡¨ç›˜å­ä¸ªæ•°
+	//sourceèµ·å§‹ä½ç½®
+	//tmpä¸­è½¬ä½ç½®
+	//desç›®çš„ä½ç½®
 	if (n == 1)
 	{
 		move(source, des);
-		//Èç¹ûÖ»ÓĞÒ»¸öÅÌ×Ó£¬Ö±½Ó´ÓAÅ²µ½B
+		//å¦‚æœåªæœ‰ä¸€ä¸ªç›˜å­ï¼Œç›´æ¥ä»AæŒªåˆ°B
 	}
 	else
 	{
-		hanoi(n - 1, source, tmp, des);       //µİ¹é½«n-1¸öÅÌ×Ó½èÖútmp£¬´ÓsourceÒÆ¶¯µ½des
-		move(source, des);                    //Ç¶Ì×µ÷ÓÃmoveº¯Êı
-		hanoi(n - 1, tmp, source, des);       //µİ¹é½«n-1¸öÅÌ×Ó½èÖúsource£¬´ÓtmpÒÆ¶¯µ½des
+		hanoi(n - 1, source, des, tmp);       //é€’å½’å°†n-1ä¸ªç›˜å­å€ŸåŠ©desï¼Œä»sourceç§»åŠ¨åˆ°tmp
+		move(source, des);                    //åµŒå¥—è°ƒç”¨moveå‡½æ•°
+		hanoi(n - 1, tmp, source, des);       //é€’å½’å°†n-1ä¸ªç›˜å­å€ŸåŠ©sourceï¼Œä»tmpç§»åŠ¨åˆ°des
 	}
 }
 int main()
 {
 	int n = 0;
-	printf("ÇëÊäÈëÅÌ×Ó¸öÊı: ");
+	printf("è¯·è¾“å…¥ç›˜å­ä¸ªæ•°: ");
 	scanf("%d", &n);
 	hanoi(n,'A', 'B', 'C');
-	//´«²Î£ºÅÌ×ÓÊı£¬Èı¸öÖù×Ó
+	//ä¼ å‚ï¼šç›˜å­æ•°ï¼Œä¸‰ä¸ªæŸ±å­
 	return 0;
 }
