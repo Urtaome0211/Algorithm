@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8b2d5c8a-e925-4161-9d0f-308df60ebb6f": {
+      "ProjectGuid": "8b2d5c8a-e925-4161-9d0f-308df60ebb6f",
+      "DisplayName": "Hanoi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
